@@ -12,7 +12,5 @@ const app = createApp(App)
 app.use(store).use(router).use(cookie, {
   expireTimes: '7d',
   path: '/',
-  domain: '',
-  secure: true,
-  sameSite: 'None'
+  domain: ''
 }).use(VueSweetalert2).mount('#app')

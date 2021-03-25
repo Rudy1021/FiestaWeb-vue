@@ -36,16 +36,15 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item mr-3 my-auto">
-                <a class="nav-link index-new" href="/index-new">
+                <router-link class="nav-link" to="/">
                   <i class="icon-home"></i>
                   首頁
-                </a>
+                </router-link>
               </li>
               <li class="nav-item mr-3 my-auto">
-                <a class="nav-link" href="#">
-                  <i class="icon-fire"></i>
-                  熱門活動
-                </a>
+                <router-link class="nav-link" to="/hotActivity">
+                  <i class="icon-fire"></i> 熱門活動</router-link
+                >
               </li>
               <li class="nav-item mr-3 my-auto">
                 <a class="nav-link" href="#">
@@ -163,7 +162,8 @@ export default {
   data() {
     return {
       login: false,
-      page: true
+      page: true,
+      index: true
     }
   },
   mounted() {

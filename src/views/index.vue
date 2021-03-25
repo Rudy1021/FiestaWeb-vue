@@ -234,7 +234,7 @@
                         <h6 class="activity-tag mb-0">#饒舌 #酒吧</h6>
                         <div class="star-group">
                           <div class="btn-star" id="1">
-                            <i class="fas fa-star fa-2x"></i>
+                            <i class="fas fa-star fa-lg"></i>
                             <i class="fas fa-star fa-lg"></i>
                             <i class="fas fa-star fa-lg"></i>
                             <i class="fas fa-star fa-lg"></i>
