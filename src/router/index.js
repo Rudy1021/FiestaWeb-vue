@@ -6,6 +6,10 @@ import signup from '../views/signup.vue'
 import interest from '../views/interest.vue'
 import activity from '../views/activity.vue'
 import hotActivity from '../views/hotActivity.vue'
+import settingsidebar from '../views/setting-sidebar.vue'
+import forgotPassword from '../views/forgotPassword.vue'
+// import groupinfo from '../components/groupInfo.vue'
+import MyGroup from '../components/MyGroup.vue'
 const routes = [
   {
     path: '/',
@@ -36,7 +40,39 @@ const routes = [
     path: '/hotActivity',
     name: 'hotActivity',
     component: hotActivity
-  }
+  },
+  {
+    path: '/MyTicket',
+    name: 'MyTicket',
+    components: {
+      sidebar: settingsidebar
+    }
+  },
+  {
+    path: '/MyFavorites',
+    name: 'MyFavorites',
+    components: {
+      sidebar: settingsidebar
+    }
+  },
+  {
+    path: '/setting',
+    name: 'setting',
+    component: settingsidebar,
+    children: [
+      {
+        path: 'MyGroup',
+        name: 'MyGroup',
+        component: MyGroup
+      }
+    ]
+  },
+  {
+    path: '/forgotPassword',
+    name: 'forgotPassword',
+    component: forgotPassword
+  },
+  { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 
 const router = createRouter({

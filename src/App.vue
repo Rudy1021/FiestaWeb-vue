@@ -86,8 +86,12 @@
                     </div>
                   </div>
                   <hr />
-                  <a class="dropdown-item" href="/myticket-new">我的票券</a>
-                  <a class="dropdown-item" href="myfavorites-new">我的收藏</a>
+                  <a class="dropdown-item" href="/setting/MyTicket">我的票券</a>
+                  <a class="dropdown-item" href="/setting/MyFavorites"
+                    >我的收藏</a
+                  >
+                  <a class="dropdown-item" href="/setting/MyGroup">我的群組</a>
+                  <a class="dropdown-item" href="javascript:;">我的投票</a>
                   <a class="dropdown-item emailtest" href="javascript:;"
                     >我的評價</a
                   >
@@ -127,6 +131,7 @@
       <headers></headers>
     </div>
     <router-view />
+    <router-view name="sidebar" />
     <footer v-if="page" class="footer">
       <section class="text-center">
         <div class="pt-4">
@@ -172,7 +177,11 @@ export default {
     } else {
       this.login = true
     }
-    if (location.pathname === '/login' || location.pathname === '/signup') {
+    if (
+      location.pathname === '/login' ||
+      location.pathname === '/signup' ||
+      location.pathname === '/forgotPassword'
+    ) {
       this.page = false
     }
   },

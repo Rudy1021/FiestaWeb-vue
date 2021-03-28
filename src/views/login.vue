@@ -16,11 +16,13 @@
             type="text"
             class="login-input border-radius-05"
             v-model="userId"
+            v-on:keypress.enter="login()"
             placeholder="帳號"
           />
         </div>
         <div class="row">
           <input
+            v-on:keypress.enter="login()"
             type="password"
             class="login-input border-radius-05"
             v-model="userPassword"
@@ -38,7 +40,7 @@
           </button>
         </div>
         <small id="" class="form-text text-muted mt-4"
-          ><a href="javascript:;" id="forgot-pwd">忘記密碼?</a></small
+          ><a href="/forgotPassword">忘記密碼?</a></small
         >
         <!--
         <div class="row mt-4">
@@ -70,37 +72,6 @@
           ><a href="/signup">還沒有會員嗎? 立即註冊!</a></small
         >
       </div>
-      <div class="forgot-pwdlist">
-        <div class="form-area border-radius-05">
-          <div class="row mt-2">
-            <div class="col">
-              <h3>請輸入帳號</h3>
-              <input
-                class="form-control"
-                type="text"
-                id="forgotId"
-                placeholder="帳號"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col text-center">
-              <button
-                class="btn btn-secondary border-radius-2 my-2"
-                id="backtologin"
-              >
-                返回
-              </button>
-              <button
-                class="btn btn-outline-primary border-radius-2 my-2"
-                id="sendforgot"
-              >
-                發送驗證信
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -124,7 +95,16 @@ export default {
         .then(res => {
           if (res.data.code === '001') {
             this.$cookies.set('token', res.data.result[0].token)
+            this.$cookies.set('138_171_198_221_', res.data.result[0].Id)
             location.href = '/'
+            /*
+                        apiEncode({
+              value: res.data.result[0].Id
+            }).then(res => {
+              this.$cookies.set('138_171_198_221_', res.data.result)
+              location.href = '/'
+            })
+            */
           } else if (res.data.code === '002') {
             this.$swal({
               text: '帳號或密碼錯誤',
