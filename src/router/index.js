@@ -8,7 +8,7 @@ import activity from '../views/activity.vue'
 import hotActivity from '../views/hotActivity.vue'
 import settingsidebar from '../views/setting-sidebar.vue'
 import forgotPassword from '../views/forgotPassword.vue'
-// import groupinfo from '../components/groupInfo.vue'
+import groupInfo from '../components/groupInfo.vue'
 import MyGroup from '../components/MyGroup.vue'
 const routes = [
   {
@@ -72,7 +72,13 @@ const routes = [
     name: 'forgotPassword',
     component: forgotPassword
   },
-  { path: '/:pathMatch(.*)*', redirect: '/' }
+  {
+    path: '/groupInfo/:id',
+    name: 'groupInfo',
+    component: groupInfo
+  },
+  { path: '/:pathMatch(.*)*', redirect: '/' },
+  { path: '/統神端火鍋', redirect: 'https://www.youtube.com/watch?v=072tU1tamd0' }
 ]
 
 const router = createRouter({

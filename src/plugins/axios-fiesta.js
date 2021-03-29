@@ -14,7 +14,7 @@ function getCookie(name) {
 }
 
 const loginURL = axios.create({
-  baseURL: 'http://163.18.42.222:8888/Fiestadb/Account/',
+  baseURL: 'http://163.18.42.222:8888/Fiestadb',
   headers: {
     Authorization: 'Bearer ' + getCookie('token')
   }
@@ -23,6 +23,7 @@ const loginURL = axios.create({
 export const apiUserLogin = data => accountURL.post('/select', data)
 export const apiUserSignUp = data => accountURL.post('/upload', data)
 export const apiUserConfirm = data => accountURL.post('/SendConfirm', data)
-export const apiGetSchool = () => BaseURL.get('/Fiestadb//getSchool')
+export const apiGetSchool = () => BaseURL.get('/Fiestadb/getSchool')
 export const apiEncode = data => BaseURL.post('/encode', data)
-export const apiGetJoinedGroup = data => loginURL.post('/getJoinedGroup', data)
+export const apiGetJoinedGroup = data => loginURL.post('/Account/getJoinedGroup', data)
+export const apiGroupSelect = data => loginURL.post('/Group/select', data)

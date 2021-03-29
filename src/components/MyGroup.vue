@@ -8,19 +8,25 @@
     <div class="mt-5">
       <div class="mt-3" v-for="(Groups, index) in group" :key="Groups.groupId">
         <div class="card border-radius-1">
-          <div class="card-body" v-bind:id="Groups.groupId">
+          <div class="card-body">
             <h5 class="d-inline">群組{{ index + 1 + 6 * (PageClick - 1) }}</h5>
             <br />
             <h5 class="d-inline">{{ Groups.groupName }}</h5>
-            <button class="float-right groupButton delete btn">
-              <i class="far fa-trash-alt deleteColor"></i>
-            </button>
-            <button class="float-right groupButton mr-2 info btn">
-              <i class="fas fa-pencil-alt infoColor"></i>
-            </button>
-            <button class="float-right groupButton mr-2 btn info">
-              <i class="fas fa-eye infoColor"></i>
-            </button>
+            <router-link
+              class="float-right groupButton delete btn"
+              :to="`MyGroup/${Groups.groupId}`"
+              ><i class="far fa-trash-alt deleteColor"></i
+            ></router-link>
+            <router-link
+              class="float-right groupButton mr-2 info btn"
+              to="/setting/MyGroup/{{ Groups.groupId }}?edit"
+              ><i class="fas fa-pencil-alt infoColor"></i
+            ></router-link>
+            <router-link
+              class="float-right groupButton mr-2 btn info"
+              :to="`/groupInfo/${Groups.groupId}`"
+              ><i class="fas fa-eye infoColor"></i
+            ></router-link>
           </div>
         </div>
       </div>
