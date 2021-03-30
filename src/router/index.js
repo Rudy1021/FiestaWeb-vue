@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import Home from '../views/Home.vue'
 import indexPage from '../views/index.vue'
 import login from '../views/login.vue'
 import signup from '../views/signup.vue'
@@ -8,8 +7,12 @@ import activity from '../views/activity.vue'
 import hotActivity from '../views/hotActivity.vue'
 import settingsidebar from '../views/setting-sidebar.vue'
 import forgotPassword from '../views/forgotPassword.vue'
-import groupInfo from '../components/groupInfo.vue'
+import groupInfo from '../views/groupInfo.vue'
 import MyGroup from '../components/MyGroup.vue'
+import MyFavorites from '../components/MyFavorites.vue'
+import MyTicket from '../components/MyTicket.vue'
+import MyEvaluaion from '../components/MyEvaluation.vue'
+import MyProfile from '../components/MyProfile.vue'
 const routes = [
   {
     path: '/',
@@ -42,20 +45,6 @@ const routes = [
     component: hotActivity
   },
   {
-    path: '/MyTicket',
-    name: 'MyTicket',
-    components: {
-      sidebar: settingsidebar
-    }
-  },
-  {
-    path: '/MyFavorites',
-    name: 'MyFavorites',
-    components: {
-      sidebar: settingsidebar
-    }
-  },
-  {
     path: '/setting',
     name: 'setting',
     component: settingsidebar,
@@ -64,6 +53,26 @@ const routes = [
         path: 'MyGroup',
         name: 'MyGroup',
         component: MyGroup
+      },
+      {
+        path: 'MyFavorites',
+        name: 'MyFavorites',
+        component: MyFavorites
+      },
+      {
+        path: 'MyTicket',
+        name: 'MyTicket',
+        component: MyTicket
+      },
+      {
+        path: 'MyEvaluation',
+        name: 'MyEvaluation',
+        component: MyEvaluaion
+      },
+      {
+        path: 'MyProfile',
+        name: 'MyProfile',
+        component: MyProfile
       }
     ]
   },
@@ -75,6 +84,16 @@ const routes = [
   {
     path: '/groupInfo/:id',
     name: 'groupInfo',
+    component: groupInfo
+  },
+  {
+    path: '/createGroup',
+    name: 'createGroup',
+    component: groupInfo
+  },
+  {
+    path: '/groupEdit/:id',
+    name: 'groupEdit',
     component: groupInfo
   },
   { path: '/:pathMatch(.*)*', redirect: '/' },

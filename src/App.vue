@@ -91,14 +91,20 @@
                     >我的收藏</a
                   >
                   <a class="dropdown-item" href="/setting/MyGroup">我的群組</a>
-                  <a class="dropdown-item" href="javascript:;">我的投票</a>
-                  <a class="dropdown-item emailtest" href="javascript:;"
+                  <a
+                    class="dropdown-item"
+                    href="https://www.youtube.com/watch?v=072tU1tamd0"
+                    >我的投票</a
+                  >
+                  <a class="dropdown-item" href="/setting/MyEvaluation"
                     >我的評價</a
                   >
-                  <a class="dropdown-item emailtest" href="javascript:;"
+                  <a class="dropdown-item emailtest" href="/setting/MyProfile"
                     >帳戶設定</a
                   >
-                  <a class="dropdown-item emailtest" href="javascript:;"
+                  <a
+                    class="dropdown-item emailtest"
+                    href="https://www.youtube.com/watch?v=QDV3rkS9yfg"
                     >更改密碼</a
                   >
                   <hr />

@@ -19,41 +19,71 @@
             <ul class="navbar-nav">
               <li class="mb-2">
                 <router-link
-                  to="/setting/MyTicket"
+                  to="MyTicket"
                   class="text-black sidebar-link"
-                  :class="{ active: this.$route.fullPath === '/MyTicket' }"
+                  :class="{
+                    active: this.$route.fullPath === '/setting/MyTicket'
+                  }"
                   >我的票券</router-link
                 >
               </li>
               <li class="mb-2">
                 <router-link
-                  to="/setting/MyFavorites"
+                  to="MyFavorites"
                   v-model="Favorites"
-                  :class="{ active: this.$route.fullPath === '/MyFavorites' }"
+                  :class="{
+                    active: this.$route.fullPath === '/setting/MyFavorites'
+                  }"
                   class="text-black sidebar-link"
                   >我的收藏</router-link
                 >
               </li>
               <li class="mb-2">
                 <router-link
-                  to="/setting/MyGroup"
+                  to="MyGroup"
                   v-model="Group"
                   class="text-black sidebar-link"
-                  :class="{ active: this.$route.fullPath === '/MyGroup' }"
+                  :class="{
+                    active: this.$route.fullPath === '/setting/MyGroup'
+                  }"
                   >我的群組</router-link
                 >
               </li>
               <li class="mb-2">
-                <a class="text-black sidebar-link" href="#">我的投票</a>
+                <a
+                  class="text-black sidebar-link"
+                  href="https://www.youtube.com/watch?v=072tU1tamd0"
+                  >我的投票</a
+                >
               </li>
               <li class="mb-2">
-                <a class="text-black sidebar-link" href="#">我的評價</a>
+                <router-link
+                  to="MyEvaluation"
+                  v-model="Evaluation"
+                  class="text-black sidebar-link"
+                  :class="{
+                    active: this.$route.fullPath === '/setting/MyEvaluation'
+                  }"
+                  >我的評價</router-link
+                >
               </li>
               <li class="mb-2">
-                <a class="text-black sidebar-link" href="#">帳戶設定</a>
+                <router-link
+                  to="MyProfile"
+                  v-model="Evaluation"
+                  class="text-black sidebar-link"
+                  :class="{
+                    active: this.$route.fullPath === '/setting/MyProfile'
+                  }"
+                  >帳戶設定</router-link
+                >
               </li>
               <li class="mb-2">
-                <a class="text-black sidebar-link" href="#">更改密碼</a>
+                <a
+                  class="text-black sidebar-link"
+                  href="https://www.youtube.com/watch?v=QDV3rkS9yfg"
+                  >更改密碼</a
+                >
               </li>
               <li class="mb-2">
                 <a

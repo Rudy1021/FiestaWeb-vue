@@ -208,14 +208,14 @@
       <div class="row">
         <div class="col-1"></div>
         <div class="col-10 mb-3 px-0">
-          <div id="carouselAround" class="carousel slide" data-ride="carousel">
+          <div id="likeActivity" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li
-                data-target="#carouselAround"
+                data-target="#likeActivity"
                 data-slide-to="0"
                 class="active"
               ></li>
-              <li data-target="#carouselAround" data-slide-to="1"></li>
+              <li data-target="#likeActivity" data-slide-to="1"></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -377,7 +377,7 @@
             </div>
             <a
               class="carousel-control-next carousel-control-next-2 btn-primary"
-              href="#carouselAround"
+              href="#likeActivity"
               role="button"
               data-slide="next"
             >
@@ -389,7 +389,7 @@
             </a>
             <a
               class="carousel-control-prev carousel-control-prev-2 btn-primary"
-              href="#carouselAround"
+              href="#likeActivity"
               role="button"
               data-slide="prev"
             >
