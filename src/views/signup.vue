@@ -212,6 +212,7 @@ export default {
               break
             case '005':
               this.$swal({
+                icon: 'error',
                 text: '帳號重複',
                 denyButtonText: '好的',
                 showDenyButton: true,
@@ -220,6 +221,7 @@ export default {
               break
             case '008':
               this.$swal({
+                icon: 'error',
                 text: '學校信箱驗證錯誤',
                 denyButtonText: '好的',
                 showDenyButton: true,
@@ -228,6 +230,7 @@ export default {
               break
             default:
               this.$swal({
+                icon: 'error',
                 text: '請稍後再試',
                 denyButtonText: '好的',
                 showDenyButton: true,
@@ -238,6 +241,7 @@ export default {
         })
       } else {
         this.$swal({
+          icon: 'error',
           text: '請勾選隱私權與個人政策條款',
           denyButtonText: '好的',
           showDenyButton: true,
@@ -270,6 +274,7 @@ export default {
         type: '1'
       })
       this.$swal({
+        icon: 'success',
         text: '已寄送驗證信，請前往信箱查收。',
         confirmButtonText: '好的',
         showConfirmButton: true

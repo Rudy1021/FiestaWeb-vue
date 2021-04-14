@@ -151,6 +151,7 @@ export default {
           })
         } else {
           this.$swal({
+            icon: 'error',
             text: '群組名稱重複',
             denyButtonText: '好的',
             showDenyButton: true,
@@ -178,6 +179,7 @@ export default {
           Useable: 'true'
         }).then(res => {
           this.$swal({
+            icon: 'success',
             text: '創建成功！',
             confirmButtonText: '好的',
             showConfirmButton: true
@@ -187,6 +189,7 @@ export default {
         })
       } else {
         this.$swal({
+          icon: 'error',
           text: '有欄位尚未填寫',
           denyButtonText: '好的',
           showDenyButton: true,
@@ -223,6 +226,7 @@ export default {
         Mail: this.mail
       }).then(res => {
         this.$swal({
+          icon: 'success',
           text: '更新成功！',
           confirmButtonText: '好的',
           showConfirmButton: true

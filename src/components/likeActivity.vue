@@ -1,6 +1,6 @@
 <template>
   <section class="like-activity">
-    <div class="row ml-5">
+    <div class="row ml-5 my-5">
       <div class="col-4">
         <div class="card border-radius-2">
           <div class="card-body">

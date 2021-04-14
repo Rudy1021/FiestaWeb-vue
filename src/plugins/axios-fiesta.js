@@ -25,6 +25,8 @@ export const apiUserLogin = data => accountURL.post('/select', data)
 export const apiUserSignUp = data => accountURL.post('/upload', data)
 export const apiUserConfirm = data => accountURL.post('/SendConfirm', data)
 export const apiGetSchool = () => BaseURL.get('/Fiestadb/getSchool')
+export const apiForgotToken = data => accountURL.get(`ForgetPassword?token=${data}`)
+export const apiUserchangePassword = data => accountURL.post('/changePassword', data)
 // 登入註冊
 
 export const apiEncode = data => BaseURL.post('/encode', data)

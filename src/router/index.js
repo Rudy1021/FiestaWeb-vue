@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import indexPage from '../views/index.vue'
-import login from '../views/login.vue'
+import loginPage from '../views/loginPage.vue'
 import signup from '../views/signup.vue'
 import interest from '../views/interest.vue'
 import activity from '../views/activity.vue'
 import hotActivity from '../views/hotActivity.vue'
 import settingsidebar from '../views/setting-sidebar.vue'
-import forgotPassword from '../views/forgotPassword.vue'
 import groupInfo from '../views/groupInfo.vue'
+import aroundActivity from '../views/aroundActivity.vue'
+import createEvent from '../views/createEvent.vue'
 import MyGroup from '../components/MyGroup.vue'
 import MyFavorites from '../components/MyFavorites.vue'
 import MyTicket from '../components/MyTicket.vue'
@@ -22,7 +23,17 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: login
+    component: loginPage
+  },
+  {
+    path: '/forgotPassword',
+    name: 'forgotPassword',
+    component: loginPage
+  },
+  {
+    path: '/changePassword/:token',
+    name: 'changePassword',
+    component: loginPage
   },
   {
     path: '/signup',
@@ -43,6 +54,11 @@ const routes = [
     path: '/hotActivity',
     name: 'hotActivity',
     component: hotActivity
+  },
+  {
+    path: '/aroundActivity',
+    name: 'aroundActivity',
+    component: aroundActivity
   },
   {
     path: '/setting',
@@ -77,11 +93,6 @@ const routes = [
     ]
   },
   {
-    path: '/forgotPassword',
-    name: 'forgotPassword',
-    component: forgotPassword
-  },
-  {
     path: '/groupInfo/:id',
     name: 'groupInfo',
     component: groupInfo
@@ -95,6 +106,11 @@ const routes = [
     path: '/groupEdit/:id',
     name: 'groupEdit',
     component: groupInfo
+  },
+  {
+    path: '/createEvent',
+    name: 'createEvent',
+    component: createEvent
   },
   { path: '/:pathMatch(.*)*', redirect: '/' },
   { path: '/統神端火鍋', redirect: 'https://www.youtube.com/watch?v=072tU1tamd0' }

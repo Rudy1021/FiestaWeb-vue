@@ -47,13 +47,12 @@
                 >
               </li>
               <li class="nav-item mr-3 my-auto">
-                <a class="nav-link" href="#">
-                  <i class="icon-location-pin"></i>
-                  周遭活動
-                </a>
+                <router-link class="nav-link" to="/aroundActivity">
+                  <i class="icon-location-pin"></i> 周遭活動</router-link
+                >
               </li>
               <li v-if="login" class="nav-item my-auto mr-3">
-                <a class="nav-link emailtest" id="Create" href="javascript:;">
+                <a class="nav-link" href="/createEvent">
                   <i class="fas fa-plus"></i>
                   創建活動
                 </a>
@@ -86,24 +85,28 @@
                     </div>
                   </div>
                   <hr />
-                  <a class="dropdown-item" href="/setting/MyTicket">我的票券</a>
-                  <a class="dropdown-item" href="/setting/MyFavorites"
-                    >我的收藏</a
-                  >
-                  <a class="dropdown-item" href="/setting/MyGroup">我的群組</a>
+                  <router-link class="dropdown-item" to="/setting/MyTicket"
+                    >我的票券
+                  </router-link>
+                  <router-link class="dropdown-item" to="/setting/MyFavorites"
+                    >我的收藏
+                  </router-link>
+                  <router-link class="dropdown-item" to="/setting/MyGroup"
+                    >我的群組
+                  </router-link>
                   <a
                     class="dropdown-item"
                     href="https://www.youtube.com/watch?v=072tU1tamd0"
                     >我的投票</a
                   >
-                  <a class="dropdown-item" href="/setting/MyEvaluation"
-                    >我的評價</a
-                  >
-                  <a class="dropdown-item emailtest" href="/setting/MyProfile"
-                    >帳戶設定</a
-                  >
+                  <router-link class="dropdown-item" to="/setting/MyEvaluation"
+                    >我的評價
+                  </router-link>
+                  <router-link class="dropdown-item" to="/setting/MyProfile"
+                    >帳戶設定
+                  </router-link>
                   <a
-                    class="dropdown-item emailtest"
+                    class="dropdown-item"
                     href="https://www.youtube.com/watch?v=QDV3rkS9yfg"
                     >更改密碼</a
                   >
@@ -186,7 +189,8 @@ export default {
     if (
       location.pathname === '/login' ||
       location.pathname === '/signup' ||
-      location.pathname === '/forgotPassword'
+      location.pathname === '/forgotPassword' ||
+      location.pathname.split('/')[1] === 'changePassword'
     ) {
       this.page = false
     }

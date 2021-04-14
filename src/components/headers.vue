@@ -53,6 +53,19 @@
         </div>
       </div>
     </section>
+    <section
+      v-if="this.$route.fullPath === '/aroundActivity'"
+      class="header mt-6 container-fluid pb-5"
+    >
+      <div class="row">
+        <div class="col-6 text-center my-auto">
+          <h1>周遭活動</h1>
+        </div>
+        <div class="col-5">
+          <img class="header-img" src="../assets/aroundActivity.png" />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 <script>

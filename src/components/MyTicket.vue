@@ -1,7 +1,15 @@
 <template>
-  <div class="main-div mx-3">
-    <h4>我的票券</h4>
-    <div class="ticket border-radius-2">
+  <div class="ticket mx-3">
+    <h4 class="mb-3">我的票券</h4>
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6 text-center">
+        <img src="../assets/empty.svg" />
+        <h5>目前沒有購買任何票卷！趕緊去購買吧！</h5>
+      </div>
+    </div>
+    <!--
+    <div class="ticket-border border-radius-2 mt-3">
       <div class="row">
         <div class="col-5">
           <img class="ticket-img border-radius-2" src="../assets/hotdemo.png" />
@@ -16,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="ticket border-radius-2 mt-3">
+    <div class="ticket-border border-radius-2 mt-3">
       <div class="row">
         <div class="col-5">
           <img class="ticket-img border-radius-2" src="../assets/hotdemo.png" />
@@ -31,6 +39,7 @@
         </div>
       </div>
     </div>
+    -->
   </div>
 </template>
 <script>
